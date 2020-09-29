@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class PlayerSimulation
 {
-    private MovementData _playerData;
+    private MovementData _movementData;
     private Camera _mainCamera;
 
     public PlayerSimulation(MovementData playerData)
     {
-        _playerData = playerData;
+        _movementData = playerData;
         _mainCamera = Camera.main;
     }
 

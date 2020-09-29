@@ -14,19 +14,22 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance;
-
+    [SerializeField] MovementData _movementData;
+   
     private GameState _currentGameState;
     public GameState CurrentGameState => _currentGameState;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public MovementData MovementData => _movementData;
+    public static GameController Instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+
+    void Awake()
     {
-       
+        if(Instance != null)
+        {
+            DestroyImmediate(this);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }

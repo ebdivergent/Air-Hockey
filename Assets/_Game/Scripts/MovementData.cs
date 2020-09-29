@@ -7,4 +7,5 @@ using UnityEngine;
 public class MovementData : ScriptableObject
 {
     public float MovementSpeed;
+    public Vector3 VelocityForBall;
 }

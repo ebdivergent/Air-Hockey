@@ -550,7 +550,9 @@
      <Compile Include="Assets\_AppCore\Scripts\UI\UIElement.cs" />
      <Compile Include="Assets\_AppCore\Scripts\UI\UILogElement.cs" />
      <Compile Include="Assets\_AppCore\Scripts\UI\UILoggerController.cs" />
-     <Compile Include="Assets\_Game\Scripts\Ball.cs" />
+     <Compile Include="Assets\_Game\Scripts\BallController.cs" />
+     <Compile Include="Assets\_Game\Scripts\BallLogic.cs" />
+     <Compile Include="Assets\_Game\Scripts\BallSimulation.cs" />
      <Compile Include="Assets\_Game\Scripts\GameController.cs" />
      <Compile Include="Assets\_Game\Scripts\MovementData.cs" />
      <Compile Include="Assets\_Game\Scripts\PlayerController.cs" />

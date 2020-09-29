@@ -803,6 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562df268906c9ad4b8dc787ac99eacc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movementData: {fileID: 11400000, guid: 3c7820ac2d1c48f469eb86044eda7828, type: 2}
 --- !u!4 &650559530
 Transform:
   m_ObjectHideFlags: 0
@@ -938,10 +939,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 687958176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4bf1812b8f72874588382183713033f, type: 3}
+  m_Script: {fileID: 11500000, guid: 94528af4bf71b954ea626b2c3fe9940f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocity: {x: 0, y: 0, z: 0}
+  _collider: {fileID: 687958177}
 --- !u!1 &711780629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2c94857d6a90148b445ebd6d6c3169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerData: {fileID: 11400000, guid: 3c7820ac2d1c48f469eb86044eda7828, type: 2}
+  _movementData: {fileID: 11400000, guid: 3c7820ac2d1c48f469eb86044eda7828, type: 2}
   _characterRb: {fileID: 776121155}
 --- !u!1 &1077871876
 GameObject:
@@ -1380,7 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2c94857d6a90148b445ebd6d6c3169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerData: {fileID: 11400000, guid: 3c7820ac2d1c48f469eb86044eda7828, type: 2}
+  _movementData: {fileID: 11400000, guid: 3c7820ac2d1c48f469eb86044eda7828, type: 2}
   _characterRb: {fileID: 1761726620}
 --- !u!54 &1761726620
 Rigidbody:
