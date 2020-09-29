@@ -4,53 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public PlayerData PlayerData;
-    public Vector3 mOffset;
-    public string InputAxisName;
-
-    
-
+    [SerializeField] MovementData _playerData;
     [SerializeField] Rigidbody _characterRb;
 
-    private float mZCoord;
+    private PlayerSimulation _playerSimulation;
+
     void Start()
     {
-
-    }
-    
-    void Update()
-    {
-
-    }
-
-    void OnMouseDown()
-    {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffset = gameObject.transform.position - GetMouseWorldPos();
-    }
-
-    private Vector3 GetMouseWorldPos()
-    {
-        Vector3 mousePoint = Input.mousePosition;
-        mousePoint.z = mZCoord;
-
-        return Camera.main.ScreenToWorldPoint(mousePoint);
+        _playerSimulation = new PlayerSimulation(_playerData);
     }
 
     void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPos();
-    }
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Ball")
-        {
-            var rbColl = collision.collider.GetComponent<Rigidbody>();
-
-            rbColl.AddForce(rbColl.transform.forward * PlayerData.Hitforce, ForceMode.VelocityChange);
-        }
+        Vector3 velocity = _playerSimulation.GetWorldPositionFromMousePosition(Input.mousePosition, gameObject.transform.position, Vector3.zero) - transform.position;
+        velocity = velocity * Time.deltaTime * _playerData.MovementSpeed;
+        _characterRb.velocity = velocity;
     }
 
 }

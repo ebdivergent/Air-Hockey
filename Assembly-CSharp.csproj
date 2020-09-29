@@ -552,8 +552,9 @@
      <Compile Include="Assets\_AppCore\Scripts\UI\UILoggerController.cs" />
      <Compile Include="Assets\_Game\Scripts\Ball.cs" />
      <Compile Include="Assets\_Game\Scripts\GameController.cs" />
+     <Compile Include="Assets\_Game\Scripts\MovementData.cs" />
      <Compile Include="Assets\_Game\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\_Game\Scripts\PlayerData.cs" />
+     <Compile Include="Assets\_Game\Scripts\PlayerSimulation.cs" />
      <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
      <None Include="Assets\EasyMobile\Demo\Materials\VerticalGradient.shader" />
      <None Include="Assets\EasyMobile\Plugins\Android\m2repository\com\sglib\easymobile\easy-mobile\maven-metadata.xml" />
